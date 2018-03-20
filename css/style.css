@@ -81,7 +81,7 @@ nav ul li a.active {
 section.sec1 {
 	width: 100%;
 	height: 100vh;
-	background-image: url("D:/FRONTEND/solid-octo-potato/img/BG1.jpg");
+	background-image: url("BG1.jpg");
 	background-size: cover;
 	background-position: center;
 
