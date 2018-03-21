@@ -77,12 +77,12 @@ nav ul li a:focus {
 }
 
 nav ul li a.active {
+
+	margin-top: 30px;
 	display: inline-block;
 	overflow: hidden;
-	height: 30px;
-	line-height: 60px;
-	border-bottom: 1px solid pink;
-	
+	height: 0px;
+	line-height: 0px;
 	position: relative;
 	color: white;
 	font-style: bold;
@@ -129,4 +129,54 @@ section.sec1 {
         padding: 15px;
     }
 
+}
+
+#button {
+	color: #fff;
+	border: 0;
+	border-bottom: 1px solid pink;
+	transition: all .2s ease-in-out;
+}
+
+#button:hover {
+	 background-color: pink;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	/*background-color: rgba(0,0,0,0.2);*/
+}
+
+.modal-content {
+	background-color: #f4f4f4;
+	margin: 20% auto;
+	padding: 20px;
+	width: 20%;
+	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.2);
+	animation-name: modalopen;
+	animation-duration: 1s;
+}
+
+.closeBtn {
+	color: pink;
+	float: right;
+	font-size: 30px;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+	color:#ca6b7c;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+@keyframes modalopen{ 
+	from {opacity: 0}
+	to {opacity: 1}
 }
