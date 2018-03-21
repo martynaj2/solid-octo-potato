@@ -8,6 +8,7 @@ body {
 
 /*przed scrollem below*/
 nav {
+	overflow: hidden;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -44,6 +45,7 @@ nav.black .logo {
 }
 
 nav ul {
+	overflow: hidden;
 	list-style: none;
 	float: right;
 	margin: 0;
@@ -53,10 +55,12 @@ nav ul {
 
 nav ul li {
 	list-style: none;
+
 }
 
 nav ul li a {
-	line-height: 80px;
+	display: inline-block;
+	line-height: 60px;
 	color: #fff;
 	padding: 12px 30px;
 	text-decoration: none;
@@ -73,9 +77,14 @@ nav ul li a:focus {
 }
 
 nav ul li a.active {
-	background: #dfe3e2;
-	color: black;
-	border-radius: 6px;
+	display: inline-block;
+	overflow: hidden;
+	height: 30px;
+	border-bottom: 1px solid pink;
+	
+	position: relative;
+	color: white;
+	font-style: bold;
 }
 
 section.sec1 {
@@ -93,10 +102,32 @@ section.sec1 {
 }
 
 .content p {
-	width: 900px;
+	width: 80%;
 	margin: 30px auto;
 	text-align: justify;
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 30px;
 
+}
+
+@media screen and (max-width: 768px){
+    .logo{
+        float: none;
+    }
+    nav ul{
+        background: #ffffff;
+        max-height: 0;
+        width: 100%;
+    }
+    nav ul.show{
+        max-height: 20em;
+    }
+    nav ul li{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px;
+    }
+  /*  .hb-button{
+        display: inline;
+    }*/
 }
